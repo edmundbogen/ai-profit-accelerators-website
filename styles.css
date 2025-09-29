@@ -145,10 +145,9 @@ body {
 .author-photo {
     width: 240px;
     height: 240px;
-    border-radius: 50%;
-    object-fit: contain;
-    object-position: center;
-    background: white;
+    border-radius: 12px;
+    object-fit: cover;
+    object-position: center top;
     border: 4px solid white;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
