@@ -5,6 +5,11 @@
     box-sizing: border-box;
 }
 
+/* Scroll offset for all sections to account for fixed header */
+section[id] {
+    scroll-margin-top: 80px;
+}
+
 :root {
     --primary-color: #4169E1; /* Royal Blue */
     --secondary-color: #1e3a8a; /* Darker Royal Blue */
@@ -246,8 +251,9 @@ body {
 /* About Section */
 .about-section {
     background: white;
-    padding: 4rem 0;
+    padding: 6rem 0 4rem 0;
     border-bottom: 1px solid var(--border-color);
+    scroll-margin-top: 80px;
 }
 
 .about-section h2 {
@@ -275,8 +281,9 @@ body {
 
 /* Table of Contents */
 .toc-section {
-    padding: 4rem 0;
+    padding: 6rem 0 4rem 0;
     background: white;
+    scroll-margin-top: 80px;
 }
 
 .toc-section h2 {
@@ -327,7 +334,8 @@ body {
 
 /* Content Sections */
 .content-section {
-    padding: 4rem 0;
+    padding: 6rem 0 4rem 0;
+    scroll-margin-top: 80px;
 }
 
 .content-section:nth-child(even) {
@@ -633,6 +641,8 @@ body {
 /* Tools Section */
 .tools-section {
     background: var(--light-color);
+    padding: 6rem 0 4rem 0;
+    scroll-margin-top: 80px;
 }
 
 .tools-grid {
@@ -821,6 +831,8 @@ body {
 /* ROI Calculator */
 .calculator-section {
     background: white;
+    padding: 6rem 0 4rem 0;
+    scroll-margin-top: 80px;
 }
 
 .calculator-card {
@@ -1205,7 +1217,8 @@ textarea {
 /* Integration Section Styles */
 .integration-section {
     background: linear-gradient(135deg, #f8f9fa 0%, #e8edf7 100%);
-    padding: 4rem 0;
+    padding: 6rem 0 4rem 0;
+    scroll-margin-top: 80px;
 }
 
 .integration-grid {
@@ -1349,7 +1362,8 @@ textarea {
 /* Advanced Section Styles */
 .advanced-section {
     background: linear-gradient(135deg, #f0f4ff 0%, #dde6ff 100%);
-    padding: 4rem 0;
+    padding: 6rem 0 4rem 0;
+    scroll-margin-top: 80px;
 }
 
 .advanced-content {
