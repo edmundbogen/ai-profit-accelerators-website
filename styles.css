@@ -6,16 +6,21 @@
 }
 
 :root {
-    --primary-color: #2563eb;
-    --secondary-color: #10b981;
-    --accent-color: #f59e0b;
+    --primary-color: #4169E1; /* Royal Blue */
+    --secondary-color: #1e3a8a; /* Darker Royal Blue */
+    --accent-color: #4169E1; /* Royal Blue */
     --danger-color: #ef4444;
-    --dark-color: #1f2937;
-    --light-color: #f9fafb;
-    --text-color: #374151;
+    --dark-color: #000000; /* Black */
+    --light-color: #ffffff; /* White */
+    --text-color: #000000; /* Black text */
+    --text-primary: #000000; /* Black text */
+    --text-secondary: #4b5563; /* Gray text */
     --border-color: #e5e7eb;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --light-bg: #f8f9fa;
+    --gradient-primary: linear-gradient(135deg, #000000 0%, #4169E1 100%);
+    --gradient-hero: linear-gradient(135deg, #000000 0%, #1e3a8a 100%);
 }
 
 body {
@@ -121,10 +126,45 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: var(--gradient-hero);
     color: white;
     padding: 5rem 0;
     text-align: center;
+    position: relative;
+}
+
+/* Author Section in Hero */
+.author-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.author-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.author-info {
+    text-align: left;
+}
+
+.hero-author {
+    font-size: 1.8rem;
+    margin: 0;
+    font-weight: 700;
+}
+
+.author-title {
+    font-size: 1.1rem;
+    opacity: 0.95;
+    margin-top: 0.5rem;
 }
 
 .hero-title {
@@ -200,6 +240,36 @@ body {
 .stat-card p {
     font-size: 1rem;
     opacity: 0.9;
+}
+
+/* About Section */
+.about-section {
+    background: white;
+    padding: 4rem 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.about-section h2 {
+    text-align: center;
+    color: var(--primary-color);
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.about-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
 }
 
 /* Table of Contents */
@@ -1054,6 +1124,25 @@ textarea {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Author Section Mobile */
+    .author-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .author-info {
+        text-align: center;
+    }
+
+    .author-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .hero-author {
+        font-size: 1.5rem;
+    }
+
     .nav-menu {
         position: fixed;
         left: -100%;
@@ -1114,7 +1203,7 @@ textarea {
 
 /* Integration Section Styles */
 .integration-section {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    background: linear-gradient(135deg, #f8f9fa 0%, #e8edf7 100%);
     padding: 4rem 0;
 }
 
@@ -1258,7 +1347,7 @@ textarea {
 
 /* Advanced Section Styles */
 .advanced-section {
-    background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+    background: linear-gradient(135deg, #f0f4ff 0%, #dde6ff 100%);
     padding: 4rem 0;
 }
 
